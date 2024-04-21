@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOLOMON</title>
+
+    <link rel="stylesheet" href="static/css/main.css" />
+
+    <script src={{url_for('static',filename="libs/gsap/gsap.min.js")}} defer></script>
+    <script src={{url_for('static',filename="libs/gsap/ScrollTrigger.min.js")}} defer></script>
+    <script src={{url_for('static',filename="libs/gsap/ScrollSmoother.min.js") }}defer></script>
+
+    <script src={{url_for('static',filename="js/app.js") }} defer></script>
+  </head>
+  
+  <body>
+     
+    <div class="content">
+      <button onclick="topFunction()" id="goTopBtn" title="Go to top">&#x25B2;</button>
+      <div class="logo">
+        <img src={{url_for('static',filename="img/Solomon.png" )}} id="Solomon_logo">
+      </div>
+
+      <header class="main-header">
+        <div class="layers">
+          <div class="layer__header">
+            <div class="layers__caption">Discover your</div>
+            <div class="layers__title">Personality</div>
+          </div>
+          <div class="layer layers__base" style="background-image: url(static/img/layer-base.png)"></div>
+          <div class="layer layers__middle" style="background-image: url(static/img/layer-middle.png)"></div>
+          <div class="layer layers__front" style="background-image: url(static/img/layer-front.png)"></div>
+          <div class="layer layers__bird_right" style="background-image: url(static/img/bird1.png)"></div>
+          <div class="layer layers__bird_left" style="background-image: url(static/img/bird2.png)"></div>
+          <div class="layer layers__sun" style="background-image: url(static/img/sun.png)"></div>
+        </div>
+      </header>
+
+      <div class="sec">
+        <h2>View Detailed Results</h2>
+        <p>
+          Learn how your personality type influences many areas of your life.
+        </p>
+
+        <div class="question">
+          <form action="" method="post" >
+            <label for="">I enjoy working out how to get things done efficiently</label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q0">
+              <label for="myRange">Agree</label>
+            </div>
+
+            <label for="">I enjoy repairing and fixing machines</label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q1">
+              <label for="myRange">Agree</label>
+            </div>
+
+            <label for="">I enjoy producing designs from my own ideas </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q2">
+              <label for="myRange">Agree</label>
+            </div>
+
+            <label for="">I enjoy being physically active  </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q3">
+              <label for="myRange">Agree</label>
+            </div>
+
+            <label for="">I enjoy managing a team of people </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q4">
+              <label for="myRange">Agree</label>
+            </div>
+
+            <label for="">I enjoy working out problems </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q5">
+              <label for="myRange">Agree</label>
+            </div>
+
+            <label for="">I enjoy working with people </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q6">
+              <label for="myRange">Agree</label>
+            </div>
+
+            <label for="">I enjoy getting the details right </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q7">
+              <label for="myRange">Agree</label>
+            </div>
+
+            <label for="">I enjoy being different </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q8">
+              <label for="myRange">Agree</label>
+            </div>
+
+            <label for="">I enjoy exploring new ideas for research purposes </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q9">
+              <label for="myRange">Agree</label>
+            </div>
+            
+            <label for="">I enjoy helping people learn new skills  </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q10">
+              <label for="myRange">Agree</label>
+            </div>
+
+            <label for="">I enjoy making or building things with my hands  </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q11">
+              <label for="myRange">Agree</label>
+            </div>
+
+            <label for="">I enjoy gathering information </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q12">
+              <label for="myRange">Agree</label>
+            </div>
+
+            <label for="">I enjoy learning new things </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q13">
+              <label for="myRange">Agree</label>
+            </div>
+            
+            <label for="">I enjoy using my imagination in my work </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q14">
+              <label for="myRange">Agree</label>
+            </div>
+
+            <label for="">I enjoy persuading people to do or to buy something </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q15">
+              <label for="myRange">Agree</label>
+            </div>
+
+            <label for="">I enjoy organising things, people and events </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q16">
+              <label for="myRange">Agree</label>
+            </div>
+
+            <label for="">I enjoy providing care for people in some way  </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q17">
+              <label for="myRange">Agree</label>
+            </div>
+
+            <label for="">I enjoy making decisions </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q18">
+              <label for="myRange">Agree</label>
+            </div>
+            
+            <label for="">I enjoy carrying out research projects </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q19">
+              <label for="myRange">Agree</label>
+            </div>
+
+            <label for="">I enjoy briefing a sales team about a new product  </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q20">
+              <label for="myRange">Agree</label>
+            </div>
+
+            <label for="">I enjoy making lists </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q21">
+              <label for="myRange">Agree</label>
+            </div>
+
+            <label for="">I enjoy expressing myself in music, painting or writing </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q22">
+              <label for="myRange">Agree</label>
+            </div>
+
+            <label for="">I enjoy working with community groups </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q23">
+              <label for="myRange">Agree</label>
+            </div>
+
+            <label for="">I enjoy questioning established theories </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q24">
+              <label for="myRange">Agree</label>
+            </div>
+            
+            <label for="">I enjoy taking calculated risks  </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q25">
+              <label for="myRange">Agree</label>
+            </div>
+
+            <label for="">I enjoy designing or servicing equipment  </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q26">
+              <label for="myRange">Agree</label>
+            </div>
+
+            <label for="">I enjoy analysing statistical data  </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q27">
+              <label for="myRange">Agree</label>
+            </div>
+
+            <label for="">I enjoy working outside in the fresh air </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q28">
+              <label for="myRange">Agree</label>
+            </div>
+            
+            <label for="">I enjoy listening to people's problems </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q29">
+              <label for="myRange">Agree</label>
+            </div>
+            
+            <label for="">I enjoy analysing a company's annual accounts </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q30">
+              <label for="myRange">Agree</label>
+            </div>
+
+            <label for="">I enjoy selling something I have created </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q31">
+              <label for="myRange">Agree</label>
+            </div>
+
+            <label for="">I enjoy writing letters, reports and articles </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q32">
+              <label for="myRange">Agree</label>
+            </div>
+            
+            <label for="">I enjoy using hand/machine tools to make things </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q33">
+              <label for="myRange">Agree</label>
+            </div>
+            
+            <label for="">I enjoy being involved in a community arts project  </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q34">
+              <label for="myRange">Agree</label>
+            </div>
+
+            <label for="">I enjoy giving advice on grants or benefits </label>
+            <div class="slidecontainer">
+              <label for="myRange">Disagree</label>
+              <input type="range" min="1" max="5" value="3" class="slider" id="myRange" name="q35">
+              <label for="myRange">Agree</label>
+            </div>
+
+            <button class="btn" type="submit" data-btn>Submit</button>
+          
+          </form>
+        </div>
+        
+      </div>
+
+      <div class="copy">
+        <footer>
+          &#169; Solomon Learning Consultancy
+        </footer>
+      </div>
+
+    </div>
+
+    <script>
+      const sliders = document.querySelectorAll('.slider');
+    
+      sliders.forEach((slider) => {
+        slider.addEventListener('input', (event) => {
+          const value = event.target.value;
+          let color = '';
+          switch(value) {
+            case '1':
+              color = '#dc3838';
+              break;
+            case '2':
+              color = 'orange';
+              break;
+            case '3':
+              color = 'yellow';
+              break;
+            case '4':
+              color = '#a2d65a';
+              break;
+            case '5':
+              color = '#36df0c';
+              break;
+          }
+          slider.style.background = '-webkit-linear-gradient(left, ' + color + ' 0%, ' + color + ' ' + (value * 20) + '%, #d3d3d3 ' + (value * 20) + '%, #d3d3d3 ' + (value * 20) + '%, ' + color + ' ' + value * 20 + '%)';
+        });
+        slider.style.background = '-webkit-linear-gradient(left, yellow 0%, yellow 60%, #d3d3d3 60%, #d3d3d3 60%, yellow 60%)'; // Set the default color to yellow
+      });
+
+      //Submit button
+      const btn = document.querySelector("[data-btn]")
+
+      btn.addEventListener("click", () => {
+        btn.classList.add("animating")
+      })
+
+
+      // Get the button
+      let mybutton = document.getElementById("goTopBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+
+    </script>
+  </body>
+</html>

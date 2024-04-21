@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOLOMON</title>
+
+    <link rel="stylesheet" href="static/css/main.css" />
+
+    <script src={{url_for('static',filename="libs/gsap/gsap.min.js")}} defer></script>
+    <script src={{url_for('static',filename="libs/gsap/ScrollTrigger.min.js")}} defer></script>
+    <script src={{url_for('static',filename="libs/gsap/ScrollSmoother.min.js") }}defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src={{url_for('static',filename="js/app.js") }} defer></script>
+  </head>
+  
+  <body>
+     
+    <div class="content">
+      <button onclick="topFunction()" id="goTopBtn" title="Go to top">&#x25B2;</button>
+      <div class="logo">
+        <img src={{url_for('static',filename="img/Solomon.png" )}} id="Solomon_logo">
+      </div>
+
+      <header class="main-header">
+        <div class="layers">
+          <div class="layer__header">
+            <div class="layers__caption">Discover your</div>
+            <div class="layers__title">Personality</div>
+          </div>
+          <div class="layer layers__base" style="background-image: url(static/img/layer-base.png)"></div>
+          <div class="layer layers__middle" style="background-image: url(static/img/layer-middle.png)"></div>
+          <div class="layer layers__front" style="background-image: url(static/img/layer-front.png)"></div>
+          <div class="layer layers__bird_right" style="background-image: url(static/img/bird1.png)"></div>
+          <div class="layer layers__bird_left" style="background-image: url(static/img/bird2.png)"></div>
+          <div class="layer layers__sun" style="background-image: url(static/img/sun.png)"></div>
+        </div>
+      </header>
+
+      <div class="sec-light">
+        <h2>Your Results</h2>
+
+
+        <div class="chartContainer">
+            
+            <canvas id="myChart"></canvas>
+            <script>
+                const data = {
+                  labels: [
+                    'Practical',
+                    'Enterprising',
+                    'Social',
+                    'Creative',
+                    'Investigative',
+                    'Organisational'
+                  ],
+                  datasets: [{
+                    label: 'My Personality',
+                    data: [{{P}}, {{E}}, {{S}}, {{C}}, {{I}}, {{O}}],
+                    fill: true,
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    pointBackgroundColor: '#fff',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#fff'
+                  }]
+                };
+              
+                const config = {
+                    type: 'radar',
+                    data: data,
+                    options: {
+                      legend: {
+                        display: false
+                      },
+                      scale: {
+                        pointLabels: {
+                          fontSize: 16
+                        }
+                      },
+                      elements: {
+                        line: {
+                          borderWidth: 3
+                        }
+                      }
+                    },
+                  };
+              
+                var myChart = new Chart(
+                  document.getElementById('myChart'),
+                  config
+                );
+              </script>
+          
+
+            <br>
+            <br>
+            <button class="btn" type="submit" id="backButton" data-btn>Go Back</button>
+            <script>
+                var backButton = document.getElementById('backButton');
+                backButton.addEventListener('click', function() {
+                  window.history.back();
+                });
+              </script>
+          
+        </div>
+        
+      </div>
+
+      <div class="sec">
+        <h2>Enterprising</h2>
+        <p>
+          - Likes to lead and persuade people, and to sell things and ideas; generally avoids activities that require careful observation and scientific, analytical thinking; <br>
+        
+          - Is good at leading people and selling things or ideas; <br>     
+
+          - Values success in politics, leadership, or business; and <br>
+
+          - Sees self as energetic, ambitious, and sociable.
+        </p>
+
+        <h2>Social</h2>
+        <p>
+          - Likes to do things to help people -- like, teaching, nursing, or giving first aid, providing information; generally avoids using machines, tools, or animals to achieve a goal; <br>
+
+          - Is good at teaching, counseling, nursing, or giving information; <br>
+          
+          - Values helping people and solving social problems; and <br>
+          
+          - Sees self as helpful, friendly, and trustworthy. <br>
+        </p>
+
+        <h2>Creative</h2>
+        <p>
+          - Likes to do creative activities like art, drama, crafts, dance, music, or creative writing; generally avoids highly ordered or repetitive activities; <br>
+
+          - Has good artistic abilities -- in creative writing, drama, crafts, music, or art; <br>
+
+          - Values the creative arts -- like drama, music, art, or the works of creative writers; and <br>
+
+          - Sees self as expressive, original, and independent. <br>
+        </p>
+
+        <h2>Investigative</h2>
+        <p>
+          - Likes to study and solve math or science problems; generally avoids leading, selling, or persuading people; <br>
+
+          - Is good at understanding and solving science and math problems; <br>
+          
+          - Values science; and <br>
+          
+          - Sees self as precise, scientific, and intellectual. <br>
+        </p>
+
+        <h2>Practical</h2>
+        <p>
+          - Likes to work with animals, tools, or machines; generally avoids social activities like teaching, healing, and informing others; <br>
+
+          - Has good skills in working with tools, mechanical or electrical drawings, machines, or plants and animals; <br>
+          
+          - Values practical things you can see, touch, and use like plants and animals, tools, equipment, or machines; and <br>
+          
+          - Sees self as practical, mechanical, and realistic. <br>
+        </p> 
+
+        <br>
+
+
+      </div>
+
+      <div class="copy">
+        <footer>
+          &#169; Solomon Learning Consultancy
+        </footer>
+      </div>
+
+    </div>
+  </body>
+</html>
